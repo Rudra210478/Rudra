@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Smart AI</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #4f46e5;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 8px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            color: #4f46e5;
+            margin-bottom: 10px;
+        }
+
+        .chat-box {
+            min-height: 150px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 75%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3730a3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🤖 Pocket Smart AI</h1>
+    <p>Your Smart Student Assistant</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>About Pocket Smart AI</h2>
+        <p>
+            Pocket Smart AI is a student assistance project designed
+            to help students with learning, study planning and
+            academic activities.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>AI Assistant</h2>
+
+        <div class="chat-box" id="chatBox">
+            <p><strong>AI:</strong> Hello! How can I help you today?</p>
+        </div>
+
+        <input type="text" id="question" placeholder="Ask your question...">
+        <button onclick="askAI()">Ask AI</button>
+    </div>
+
+    <div class="card">
+        <h2>Study Features</h2>
+
+        <ul>
+            <li>📚 Study Assistance</li>
+            <li>📝 Notes Support</li>
+            <li>📅 Study Planning</li>
+            <li>💡 Doubt Clarification</li>
+            <li>🤖 AI Chat Assistant</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Pocket Smart AI | Naan Mudhalvan Project</p>
+</footer>
+
+<script>
+    function askAI() {
+        let question = document.getElementById("question").value;
+        let chatBox = document.getElementById("chatBox");
+
+        if (question.trim() === "") {
+            alert("Please enter a question.");
+            return;
+        }
+
+        chatBox.innerHTML +=
+            "<p><strong>You:</strong> " + question + "</p>";
+
+        chatBox.innerHTML +=
+            "<p><strong>AI:</strong> Thanks for your question! " +
+            "This demo assistant can be connected to an AI API for " +
+            "real-time answers.</p>";
+
+        document.getElementById("question").value = "";
+    }
+</script>
+
+</body>
+</html>
