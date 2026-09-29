@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pocket Smart AI</title>
-
+<link rel="stylesheet" href="style.css">
     <style>
         * {
             box-sizing: border-box;
@@ -137,27 +137,6 @@
     <p>© 2026 Pocket Smart AI | Naan Mudhalvan Project</p>
 </footer>
 
-<script>
-    function askAI() {
-        let question = document.getElementById("question").value;
-        let chatBox = document.getElementById("chatBox");
-
-        if (question.trim() === "") {
-            alert("Please enter a question.");
-            return;
-        }
-
-        chatBox.innerHTML +=
-            "<p><strong>You:</strong> " + question + "</p>";
-
-        chatBox.innerHTML +=
-            "<p><strong>AI:</strong> Thanks for your question! " +
-            "This demo assistant can be connected to an AI API for " +
-            "real-time answers.</p>";
-
-        document.getElementById("question").value = "";
-    }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
